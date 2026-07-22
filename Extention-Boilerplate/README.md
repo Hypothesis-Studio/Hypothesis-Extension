@@ -1,52 +1,52 @@
 # Hypothesis Extension Boilerplate
 
-Boilerplate ini adalah titik awal untuk membuat extension/plugin untuk **Hypothesis Editor**.
+This boilerplate is the starting point for creating extensions/plugins for **Hypothesis Editor**.
 
 ---
 
-## Struktur Folder
+## Folder Structure
 
 ```
 extension-boilerplate/
-├── package.json      ← Manifest extension
+├── package.json      ← Extension manifest
 ├── extension.js      ← Entry point: activate() & deactivate()
-└── README.md         ← Dokumentasi ini
+└── README.md         ← This documentation
 ```
 
-> **Wajib ada:** `package.json` + `extension.js` (atau file JS lain yang di-set di `main`).
+> **Required:** `package.json` + `extension.js` (or another JS file set in `main`).
 
 ---
 
 ## `package.json`
 
-### ✅ Wajib
+### ✅ Required
 
-| Field     | Keterangan                                  |
-| --------- | ------------------------------------------- |
-| `name`    | Nama tampilan extension                     |
-| `id`      | ID unik, format kebab-case (`my-extension`) |
-| `version` | SemVer string (`1.0.0`)                     |
+| Field     | Description                                     |
+| --------- | ----------------------------------------------- |
+| `name`    | Extension display name                          |
+| `id`      | Unique ID, kebab-case format (`my-extension`)   |
+| `version` | SemVer string (`1.0.0`)                         |
 
-### ⚙️ Opsional
+### ⚙️ Optional
 
-| Field         | Keterangan                                              |
-| ------------- | ------------------------------------------------------- |
-| `main`        | Entry file, default `extension.js`                      |
-| `description` | Deskripsi singkat tentang extension                     |
-| `author`      | Nama pembuat                                            |
-| `license`     | Lisensi (contoh: `MIT`)                                 |
-| `icon`        | SVG data URI — ikon extension di sidebar                |
-| `dependencies`| npm packages — otomatis di-install saat extension aktif |
+| Field         | Description                                                  |
+| ------------- | ------------------------------------------------------------ |
+| `main`        | Entry file, defaults to `extension.js`                       |
+| `description` | Short description of the extension                           |
+| `author`      | Author name                                                  |
+| `license`     | License (e.g. `MIT`)                                         |
+| `icon`        | SVG data URI — extension icon in the sidebar                 |
+| `dependencies`| npm packages — automatically installed when extension activates |
 
-### 🔧 Advance
+### 🔧 Advanced
 
-| Field                   | Keterangan                                              |
-| ----------------------- | ------------------------------------------------------- |
-| `contributes.commands`  | Daftar command yang muncul di Command Palette           |
+| Field                   | Description                                                  |
+| ----------------------- | ------------------------------------------------------------ |
+| `contributes.commands`  | List of commands that appear in the Command Palette          |
 
 ---
 
-### Contoh `package.json` Minimal
+### Minimal `package.json` Example
 
 ```json
 {
@@ -56,7 +56,7 @@ extension-boilerplate/
 }
 ```
 
-### Contoh `package.json` Lengkap
+### Full `package.json` Example
 
 ```json
 {
@@ -80,17 +80,17 @@ extension-boilerplate/
 
 ## `extension.js`
 
-### ✅ Wajib — Export `activate` & `deactivate`
+### ✅ Required — Export `activate` & `deactivate`
 
 ```js
 'use strict';
 
 function activate(context) {
-  // Dipanggil saat extension diaktifkan
+  // Called when the extension is activated
 }
 
 function deactivate() {
-  // Dipanggil saat extension dinonaktifkan
+  // Called when the extension is deactivated
 }
 
 module.exports = { activate, deactivate };
@@ -98,7 +98,7 @@ module.exports = { activate, deactivate };
 
 ---
 
-### ✅ Wajib — Register Command (jika ingin muncul di Command Palette)
+### ✅ Required — Register Command (if you want it in the Command Palette)
 
 ```js
 function activate(context) {
@@ -109,21 +109,21 @@ function activate(context) {
 }
 ```
 
-> `context.subscriptions.push(cmd)` — agar auto-cleanup saat extension di-uninstall/disable.
+> `context.subscriptions.push(cmd)` — ensures auto-cleanup when the extension is uninstalled or disabled.
 
 ---
 
-### ⚙️ Opsional — Show Notification
+### ⚙️ Optional — Show Notification
 
 ```js
-context.window.showInformationMessage('Pesan info');
-context.window.showWarningMessage('Pesan warning');
-context.window.showErrorMessage('Pesan error');
+context.window.showInformationMessage('Info message');
+context.window.showWarningMessage('Warning message');
+context.window.showErrorMessage('Error message');
 ```
 
 ---
 
-### ⚙️ Opsional — Baca User Settings
+### ⚙️ Optional — Read User Settings
 
 ```js
 const config = context.workspace.getConfiguration('editor');
@@ -133,7 +133,7 @@ const hasKey   = config.has('theme');
 
 ---
 
-### 🔧 Advance — Eksekusi Command Lain
+### 🔧 Advanced — Execute Another Command
 
 ```js
 await context.commands.executeCommand('other.command', arg1, arg2);
@@ -141,9 +141,9 @@ await context.commands.executeCommand('other.command', arg1, arg2);
 
 ---
 
-### 🔧 Advance — Push ke `context.subscriptions`
+### 🔧 Advanced — Push to `context.subscriptions`
 
-Semua resource yang perlu di-cleanup harus di-push:
+All resources that need cleanup must be pushed:
 
 ```js
 context.subscriptions.push(myDisposable);
@@ -153,66 +153,66 @@ context.subscriptions.push(myDisposable);
 
 ## Plugin API Context
 
-Parameter `context` yang diterima di `activate(context)`:
+The `context` parameter received in `activate(context)`:
 
-| API                                        | Tipe     | Keterangan                          |
-| ------------------------------------------ | -------- | ----------------------------------- |
-| `context.commands.registerCommand(id, fn)` | ✅ Wajib | Register command ke Command Palette |
-| `context.subscriptions.push(disposable)`   | ✅ Wajib | Auto-cleanup saat deactivate       |
-| `context.window.showInformationMessage()`  | ⚙️ Opsional | Tampilkan notifikasi           |
-| `context.window.showWarningMessage()`      | ⚙️ Opsional | Notifikasi warning              |
-| `context.window.showErrorMessage()`        | ⚙️ Opsional | Notifikasi error                |
-| `context.workspace.getConfiguration(sec)`  | ⚙️ Opsional | Baca user settings              |
-| `context.commands.executeCommand(id, ...)` | 🔧 Advance | Eksekusi command lain           |
+| API                                        | Type     | Description                              |
+| ------------------------------------------ | -------- | ---------------------------------------- |
+| `context.commands.registerCommand(id, fn)` | ✅ Required | Register command in the Command Palette |
+| `context.subscriptions.push(disposable)`   | ✅ Required | Auto-cleanup on deactivate              |
+| `context.window.showInformationMessage()`  | ⚙️ Optional | Show an info notification               |
+| `context.window.showWarningMessage()`      | ⚙️ Optional | Show a warning notification             |
+| `context.window.showErrorMessage()`        | ⚙️ Optional | Show an error notification              |
+| `context.workspace.getConfiguration(sec)`  | ⚙️ Optional | Read user settings                      |
+| `context.commands.executeCommand(id, ...)` | 🔧 Advanced | Execute another command                 |
 
 ---
 
 ## Lifecycle
 
 ```
-1. User install extension (.hyp file atau folder)
-2. PluginService copy ke ~/.hypothesis/extensions/<id>/
-3. npm dependencies otomatis di-install (jika ada)
-4. activate(context) dipanggil
-5. Extension berjalan, commands terdaftar di Command Palette
-6. Saat uninstall/disable → deactivate() dipanggil, resources di-cleanup
+1. User installs extension (.hyp file or folder)
+2. PluginService copies it to ~/.hypothesis/extensions/<id>/
+3. npm dependencies are automatically installed (if any)
+4. activate(context) is called
+5. Extension runs, commands registered in the Command Palette
+6. On uninstall/disable → deactivate() is called, resources are cleaned up
 ```
 
 ---
 
-## Cara Build & Distribute
+## How to Build & Distribute
 
-### Development (dari folder)
+### Development (from folder)
 
 ```
-Hypothesis Editor → Extensions → Install from Folder → pilih folder ini
+Hypothesis Editor → Extensions → Install from Folder → select this folder
 ```
 
-### Distribute sebagai .hyp file
+### Distribute as .hyp file
 
-`.hyp` adalah arsip tar:
+`.hyp` is a tar archive:
 
 ```bash
-tar -cf my-extension-1.0.0.hyp -C /path/to/parent folder-extension
+tar -cf my-extension-1.0.0.hyp -C /path/to/parent extension-folder
 ```
 
-User lain bisa install via: **Extensions → Install .hyp File**
+Other users can install via: **Extensions → Install .hyp File**
 
 ---
 
 ## Tips
 
-- **ID harus unik** — gunakan format `<nama-extension>` tanpa spasi
-- **Command ID** sebaiknya format `<extension-id>.<action>`
-- **Dependencies** otomatis di-install, tapi pastikan package tersedia di npm
-- **Error handling** — wrap logic di try/catch agar extension tidak crash editor
-- **Jangan blokir activate()** — gunakan async untuk operasi berat
-- **`contributes.commands`** — tanpa ini, command tidak muncul di Command Palette
+- **ID must be unique** — use `<extension-name>` format without spaces
+- **Command ID** should follow `<extension-id>.<action>` format
+- **Dependencies** are installed automatically, but make sure the package is available on npm
+- **Error handling** — wrap logic in try/catch to prevent the extension from crashing the editor
+- **Don't block `activate()`** — use async for heavy operations
+- **`contributes.commands`** — without this, commands won't appear in the Command Palette
 
 ---
 
-## Referensi
+## References
 
-- Boilerplate ini: `C:\Users\USER\.openclaw\workspace\extension\Extention-Boilerplate\`
+- This boilerplate: `C:\Users\USER\.openclaw\workspace\extension\Extention-Boilerplate\`
 - Hypothesis Editor: `C:\Users\USER\.openclaw\workspace\hypothesis\`
 - Plugin System: `src/main/services/PluginService.ts`

@@ -1,17 +1,17 @@
-# Prettier Extension untuk Hypothesis Editor
+# Prettier Extension for Hypothesis Editor
 
-Extension ini mengintegrasikan [Prettier](https://prettier.io) ke dalam Hypothesis Editor untuk memformat kode secara otomatis.
+This extension integrates [Prettier](https://prettier.io) into Hypothesis Editor for automatic code formatting.
 
-## Fitur
+## Features
 
-- **Format Document** — Format seluruh dokumen aktif
-- **Format Selection** — Format hanya teks yang dipilih
+- **Format Document** — Format the entire active document
+- **Format Selection** — Format only the selected text
 
-Perintah terdaftar otomatis di **Command Palette** (`Ctrl+Shift+P`) setelah extension diaktifkan.
+Commands are automatically registered in the **Command Palette** (`Ctrl+Shift+P`) once the extension is activated.
 
-## Bahasa yang Didukung
+## Supported Languages
 
-| Bahasa | Parser |
+| Language | Parser |
 |---|---|
 | JavaScript / JSX | `babel` |
 | TypeScript / TSX | `typescript` |
@@ -22,33 +22,33 @@ Perintah terdaftar otomatis di **Command Palette** (`Ctrl+Shift+P`) setelah exte
 | Markdown | `markdown` |
 | YAML | `yaml` |
 
-## Cara Install
+## Installation
 
-1. Buka Hypothesis Editor
-2. Klik icon **Extensions** di sidebar kiri
-3. Klik tombol **+** (Install Extension)
-4. Pilih file `prettier-1.0.0.hyp`
+1. Open Hypothesis Editor
+2. Click the **Extensions** icon in the left sidebar
+3. Click the **+** button (Install Extension)
+4. Select the `prettier-1.0.0.hyp` file
 
-## Cara Pakai
+## Usage
 
 ### Format Document
-- **Command Palette**: `Ctrl+Shift+P` → ketik "Format Document with Prettier"
+- **Command Palette**: `Ctrl+Shift+P` → type "Format Document with Prettier"
 
 ### Format Selection
-- Pilih teks yang ingin diformat
-- **Command Palette**: `Ctrl+Shift+P` → ketik "Format Selection with Prettier"
+- Select the text you want to format
+- **Command Palette**: `Ctrl+Shift+P` → type "Format Selection with Prettier"
 
-## Opsi Format
+## Format Options
 
-| Opsi | Nilai |
+| Option | Value |
 |---|---|
-| `semi` | `true` (titik koma di akhir statement) |
-| `singleQuote` | `true` (gunakan kutip satu) |
-| `trailingComma` | `"all"` (koma di akhir) |
-| `printWidth` | `100` (lebar maksimum baris) |
-| `tabWidth` | `2` (jumlah spasi per indentasi) |
+| `semi` | `true` (semicolons at the end of statements) |
+| `singleQuote` | `true` (use single quotes) |
+| `trailingComma` | `"all"` (trailing commas) |
+| `printWidth` | `100` (maximum line width) |
+| `tabWidth` | `2` (spaces per indentation level) |
 
-## Membuat File .hyp
+## Creating the .hyp File
 
 ```bash
 tar -cf prettier-1.0.0.hyp --exclude="node_modules" --exclude=".hyp" .
