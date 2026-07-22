@@ -6,11 +6,21 @@
   "main": "extension.js",
   "author": "Your Name",
   "license": "MIT",
+  "engines": {
+    "hypothesis": ">=1.0.0"
+  },
+  "activationEvents": ["onStartup"],
   "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234fc1ff' stroke-width='2'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5z'/%3E%3Cpath d='M2 17l10 5 10-5'/%3E%3Cpath d='M2 12l10 5 10-5'/%3E%3C/svg%3E",
   "contributes": {
     "commands": [
       { "command": "my-extension.hello", "title": "Hello World", "category": "My Extension" },
-      { "command": "my-extension.showInfo", "title": "Show Info", "category": "My Extension" }
+      { "command": "my-extension.showInfo", "title": "Show Info", "category": "My Extension" },
+      { "command": "my-extension.listFiles", "title": "List Files in Workspace", "category": "My Extension" },
+      { "command": "my-extension.runTerminal", "title": "Run Command in Terminal", "category": "My Extension" },
+      { "command": "my-extension.gitStatus", "title": "Show Git Status", "category": "My Extension" }
+    ],
+    "keybindings": [
+      { "command": "my-extension.hello", "key": "Ctrl+Shift+H" }
     ]
   }
 }
