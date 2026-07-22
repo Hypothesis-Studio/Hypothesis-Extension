@@ -1,16 +1,30 @@
 {
   "name": "Live Server",
   "id": "live-server",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Launch a local development server with live reload. Auto-refreshes your browser when HTML, CSS, or JS files change.",
   "main": "extension.js",
   "author": "Hypothesis",
   "license": "MIT",
+  "engines": {
+    "hypothesis": ">=1.0.0"
+  },
+  "activationEvents": ["onStartup"],
   "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234ade80' stroke-width='2'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E",
   "contributes": {
     "commands": [
       { "command": "live-server.start", "title": "Live Server: Start", "category": "Live Server" },
       { "command": "live-server.stop",  "title": "Live Server: Stop",  "category": "Live Server" }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "liveServer.port": {
+          "type": "number",
+          "default": 5500,
+          "description": "Default port for Live Server"
+        }
+      }
+    }
   }
 }

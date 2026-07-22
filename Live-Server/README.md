@@ -6,17 +6,15 @@ Local development server with **live reload** — auto-refreshes your browser wh
 
 | Command | Description |
 |---------|-------------|
-| **Live Server: Start Server** | Start HTTP server on default port (5500) |
-| **Live Server: Stop Server** | Stop the running server |
-| **Live Server: Open in Browser** | Start server + open browser automatically |
-| **Live Server: Toggle Server** | Start/stop toggle |
+| **Live Server: Start** | Start HTTP server (default port 5500) |
+| **Live Server: Stop** | Stop the running server |
 
 Access via **Command Palette** (`Ctrl+Shift+P`) → type `Live Server`.
 
 ## How It Works
 
-1. Opens a workspace folder in Hypothesis
-2. Run `Live Server: Open in Browser` from the Command Palette
+1. Open a workspace folder in Hypothesis
+2. Run `Live Server: Start` from the Command Palette
 3. Browser opens showing your `index.html`
 4. Edit any file → browser auto-refreshes
 
@@ -30,6 +28,7 @@ Access via **Command Palette** (`Ctrl+Shift+P`) → type `Live Server`.
 - **MIME type support** — 40+ file types handled correctly
 - **Secure** — token-authenticated WebSocket connections
 - **Path traversal protection** — cannot access files outside workspace
+- **Status bar indicator** — shows server state and URL
 
 ## Configuration
 
@@ -48,7 +47,7 @@ To change, add to your Hypothesis settings:
 
 ### As .hyp package (distribution)
 ```bash
-tar -cf live-server-1.0.0.hyp -C /path/to/parent Live-Server
+tar -cf live-server-1.1.0.hyp -C /path/to/parent Live-Server
 ```
 Then: Extensions → Install .hyp File
 

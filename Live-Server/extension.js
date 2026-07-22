@@ -27,6 +27,7 @@ let watcher = null;
 let wsClients = new Set();
 let liveReloadPort = null;
 let serverRoot = null;
+let statusBarItem = null;
 
 const DEFAULT_PORT = 5500;
 const INJECTED_SCRIPT_ID = '__hyp_live_reload__';
@@ -234,8 +235,6 @@ function startWatcher(root) {
 function stopWatcher() { if (watcher) { try { watcher.close(); } catch (_) {} watcher = null; } }
 
 // ── Renderer notifications ────────────────────────────────────────
-// StatusBar listens on 'live-server:status' for the green indicator.
-// Console panel reads 'extension:console' for log entries.
 function notifyRenderer(running, serverUrl) {
   try {
     const win = BrowserWindow.getAllWindows()[0];
@@ -252,6 +251,17 @@ function notifyRenderer(running, serverUrl) {
       win.webContents.send('extension:console', { level: 'info', source: 'Live Server', message: 'Server stopped.' });
     }
   } catch (_) { /* ignore */ }
+}
+
+// ── Status bar ────────────────────────────────────────────────────
+function updateStatusBar(context, running, serverUrl) {
+  if (statusBarItem) {
+    if (running && serverUrl) {
+      statusBarItem.updateItem('live-server.status', `🟢 Live Server: ${serverUrl}`);
+    } else {
+      statusBarItem.updateItem('live-server.status', '⚪ Live Server: Off');
+    }
+  }
 }
 
 // ── Resolve workspace root path ───────────────────────────────────
@@ -272,7 +282,7 @@ async function resolveRootPath(context) {
 // ── Server control ────────────────────────────────────────────────
 async function startServer(context) {
   if (httpServer) {
-    context.window.showInformationMessage('Live Server is already running at http://localhost:' + liveReloadPort);
+    context.notifications.info('Live Server is already running at http://localhost:' + liveReloadPort);
     return;
   }
 
@@ -289,7 +299,7 @@ async function startServer(context) {
   }
 
   if (!root) {
-    context.window.showErrorMessage('Live Server: No folder is open. Open a folder first (File → Open Folder)');
+    context.notifications.error('Live Server: No folder is open. Open a folder first (File → Open Folder)');
     return;
   }
 
@@ -315,18 +325,19 @@ async function startServer(context) {
     const serverUrl = `http://localhost:${port}`;
     log(`Started at ${serverUrl} serving ${root}`);
     notifyRenderer(true, serverUrl);
-    context.window.showInformationMessage(`Live Server started: ${serverUrl}`);
+    updateStatusBar(context, true, serverUrl);
+    context.notifications.success(`Live Server started: ${serverUrl}`);
   });
 
   server.on('error', (e) => {
-    context.window.showErrorMessage(`Live Server error: ${e.message}`);
+    context.notifications.error(`Live Server error: ${e.message}`);
     httpServer = null;
   });
 }
 
 function stopServer(context) {
   if (!httpServer) {
-    if (context) context.window.showInformationMessage('Live Server is not running.');
+    if (context) context.notifications.info('Live Server is not running.');
     return;
   }
   for (const c of wsClients) { try { c.destroy(); } catch (_) {} }
@@ -337,15 +348,36 @@ function stopServer(context) {
   liveReloadPort = null;
   serverRoot = null;
   notifyRenderer(false, null);
+  if (context) updateStatusBar(context, false, null);
 }
 
 // ── Extension entry points ────────────────────────────────────────
 function activate(context) {
   try {
     log('Activating…');
+
+    // Commands
     const startCmd = context.commands.registerCommand('live-server.start', () => startServer(context));
     const stopCmd  = context.commands.registerCommand('live-server.stop',  () => stopServer(context));
     context.subscriptions.push(startCmd, stopCmd);
+
+    // Status bar
+    statusBarItem = context.ui.createStatusBarItem(
+      'live-server.status',
+      '⚪ Live Server: Off',
+      'right',
+      50
+    );
+    context.subscriptions.push(statusBarItem);
+
+    // Listen for file saves to show reload count
+    const saveListener = context.events.onDidSaveTextDocument((doc) => {
+      if (httpServer) {
+        log(`Saved: ${doc.uri} — reloading browser`);
+      }
+    });
+    context.subscriptions.push(saveListener);
+
     log('Activated — Command Palette → "Live Server"');
   } catch (e) {
     log('Activation error: ' + e.message);
