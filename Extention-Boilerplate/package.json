@@ -1,0 +1,16 @@
+{
+  "name": "My Extension",
+  "id": "my-extension",
+  "version": "1.0.0",
+  "description": "A brief description of what your extension does.",
+  "main": "extension.js",
+  "author": "Your Name",
+  "license": "MIT",
+  "icon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234fc1ff' stroke-width='2'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5z'/%3E%3Cpath d='M2 17l10 5 10-5'/%3E%3Cpath d='M2 12l10 5 10-5'/%3E%3C/svg%3E",
+  "contributes": {
+    "commands": [
+      { "command": "my-extension.hello", "title": "Hello World", "category": "My Extension" },
+      { "command": "my-extension.showInfo", "title": "Show Info", "category": "My Extension" }
+    ]
+  }
+}
