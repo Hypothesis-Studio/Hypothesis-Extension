@@ -50,7 +50,47 @@ extension-boilerplate/
 | `contributes.languages`      | Language support (syntax, completions)                       |
 | `contributes.snippets`       | Code snippets                                                |
 | `contributes.views`          | Sidebar views                                                |
+| `contributes.iconThemes`     | Custom icon packs (see Icon Theme Extension below)           |
 | `contributes.configuration`  | Settings schema                                              |
+
+### Icon Theme Extension
+
+Create a custom icon pack extension:
+
+```
+my-icon-theme/
+├── package.json
+├── icons/
+│   ├── file.svg
+│   ├── folder.svg
+│   ├── folder-opened.svg
+│   ├── typescript.svg
+│   ├── javascript.svg
+│   └── ... (see material/codi packs for naming convention)
+└── extension.js (optional)
+```
+
+package.json:
+```json
+{
+  "name": "My Icon Theme",
+  "id": "my-icon-theme",
+  "version": "1.0.0",
+  "contributes": {
+    "iconThemes": [
+      {
+        "id": "my-icon-theme",
+        "label": "My Icon Theme",
+        "path": "./icons"
+      }
+    ]
+  }
+}
+```
+
+After install, the theme appears in Settings → Workbench → Icon Theme.
+SVG naming convention: match filenames from `material/` or `codi/` packs (e.g. `typescript.svg`, `folder.svg`, `file.svg`).
+Icons with `fill="currentColor"` inherit theme colors; hardcoded fill colors are preserved.
 
 ---
 

@@ -198,6 +198,7 @@
  *   contributes.languages    — Language support
  *   contributes.snippets     — Code snippets
  *   contributes.views        — Sidebar views
+ *   contributes.iconThemes    — Custom icon packs
  *   contributes.configuration — Settings schema
  *   dependencies       — npm packages (auto-installed on install)
  */

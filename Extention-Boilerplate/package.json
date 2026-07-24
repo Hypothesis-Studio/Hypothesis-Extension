@@ -21,6 +21,7 @@
     ],
     "keybindings": [
       { "command": "my-extension.hello", "key": "Ctrl+Shift+H" }
-    ]
+    ],
+    "iconThemes": []
   }
 }
