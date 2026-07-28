@@ -16,5 +16,9 @@
     ],
     "commands": []
   },
-  "keywords": ["theme", "one-dark", "atom", "dark", "light"]
+  "keywords": ["theme", "one-dark", "atom", "dark", "light"],
+  "scripts": {
+    "build": "node build.mjs",
+    "build:dev": "node build.mjs --dev"
+  }
 }
