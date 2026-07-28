@@ -1,0 +1,44 @@
+{
+  "id": "rose-pine",
+  "name": "Rosé Pine",
+  "displayName": "Rosé Pine",
+  "version": "1.0.0",
+  "description": "All natural pine, faux fur and a bit of soho vibes.",
+  "author": "Hypothesis",
+  "license": "MIT",
+  "main": "extension.js",
+  "engines": {
+    "hypothesis": ">=0.1.0"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "id": "rose-pine",
+        "label": "Rosé Pine",
+        "path": "themes/rose-pine.json",
+        "uiTheme": "vs-dark"
+      }
+    ],
+    "commands": [
+      {
+        "command": "rosepine.activate",
+        "title": "Activate Rosé Pine"
+      }
+    ]
+  },
+  "keywords": [
+    "theme",
+    "dark",
+    "rose",
+    "pine",
+    "elegant"
+  ],
+  "private": true,
+  "scripts": {
+    "build": "node build.mjs",
+    "build:dev": "node build.mjs --dev"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "everforest",
+  "name": "Everforest",
+  "displayName": "Everforest",
+  "version": "1.0.0",
+  "description": "Comfortable green-based color scheme. Dark and Light variants.",
+  "author": "Hypothesis",
+  "license": "MIT",
+  "main": "extension.js",
+  "engines": {
+    "hypothesis": ">=0.1.0"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "id": "everforest-dark",
+        "label": "Everforest Dark",
+        "path": "themes/everforest-dark.json",
+        "uiTheme": "vs-dark"
+      },
+      {
+        "id": "everforest-light",
+        "label": "Everforest Light",
+        "path": "themes/everforest-light.json",
+        "uiTheme": "vs"
+      }
+    ],
+    "commands": [
+      {
+        "command": "everforest.activateDark",
+        "title": "Activate Everforest Dark"
+      },
+      {
+        "command": "everforest.activateLight",
+        "title": "Activate Everforest Light"
+      }
+    ]
+  },
+  "keywords": [
+    "theme",
+    "dark",
+    "light",
+    "everforest",
+    "green",
+    "nature"
+  ],
+  "private": true,
+  "scripts": {
+    "build": "node build.mjs",
+    "build:dev": "node build.mjs --dev"
+  }
+}

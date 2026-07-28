@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "hypothesis-theme-v1",
   "id": "tokyo-night",
   "name": "Tokyo Night",
@@ -128,11 +128,11 @@
     "dropdown.foreground": "#c0caf5",
     "dropdown.border": "#3b4261",
     "list.activeSelectionBackground": "#33467c55",
-    "list.activeSelectionForeground": "#c0caf5",
+    "list.activeSelectionForeground": "#ffffff",
     "list.hoverBackground": "#1f2335",
     "list.hoverForeground": "#c0caf5",
     "list.focusBackground": "#33467c44",
-    "list.focusForeground": "#c0caf5",
+    "list.focusForeground": "#ffffff",
     "list.highlightForeground": "#7aa2f7",
     "list.inactiveSelectionBackground": "#1f2335",
     "list.errorForeground": "#f7768e",

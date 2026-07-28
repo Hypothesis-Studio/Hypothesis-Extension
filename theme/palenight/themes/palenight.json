@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "hypothesis-theme-v1",
   "id": "palenight",
   "name": "Palenight",
@@ -128,11 +128,11 @@
     "dropdown.foreground": "#a6accd",
     "dropdown.border": "#676e95",
     "list.activeSelectionBackground": "#c792ea44",
-    "list.activeSelectionForeground": "#a6accd",
+    "list.activeSelectionForeground": "#ffffff",
     "list.hoverBackground": "#2c3145",
     "list.hoverForeground": "#a6accd",
     "list.focusBackground": "#c792ea33",
-    "list.focusForeground": "#a6accd",
+    "list.focusForeground": "#ffffff",
     "list.highlightForeground": "#c792ea",
     "list.inactiveSelectionBackground": "#2c3145",
     "list.errorForeground": "#f07178",

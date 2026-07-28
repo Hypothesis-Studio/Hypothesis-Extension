@@ -1,0 +1,54 @@
+{
+  "id": "catppuccin",
+  "name": "Catppuccin",
+  "displayName": "Catppuccin",
+  "version": "1.0.0",
+  "description": "Soothing pastel theme for the high-spirited. Mocha and Latte variants.",
+  "author": "Hypothesis",
+  "license": "MIT",
+  "main": "extension.js",
+  "engines": {
+    "hypothesis": ">=0.1.0"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "id": "catppuccin-mocha",
+        "label": "Catppuccin Mocha",
+        "path": "themes/catppuccin-mocha.json",
+        "uiTheme": "vs-dark"
+      },
+      {
+        "id": "catppuccin-latte",
+        "label": "Catppuccin Latte",
+        "path": "themes/catppuccin-latte.json",
+        "uiTheme": "vs"
+      }
+    ],
+    "commands": [
+      {
+        "command": "catppuccin.activateMocha",
+        "title": "Activate Catppuccin Mocha"
+      },
+      {
+        "command": "catppuccin.activateLatte",
+        "title": "Activate Catppuccin Latte"
+      }
+    ]
+  },
+  "keywords": [
+    "theme",
+    "dark",
+    "light",
+    "catppuccin",
+    "pastel"
+  ],
+  "private": true,
+  "scripts": {
+    "build": "node build.mjs",
+    "build:dev": "node build.mjs --dev"
+  }
+}

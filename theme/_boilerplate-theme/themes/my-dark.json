@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "hypothesis-theme-v1",
   "id": "my-dark",
   "name": "My Dark",
@@ -110,11 +110,11 @@
     "dropdown.border": "#45475a",
 
     "list.activeSelectionBackground": "#45475a44",
-    "list.activeSelectionForeground": "#cdd6f4",
+    "list.activeSelectionForeground": "#ffffff",
     "list.hoverBackground": "#313244",
     "list.hoverForeground": "#cdd6f4",
     "list.focusBackground": "#45475a33",
-    "list.focusForeground": "#cdd6f4",
+    "list.focusForeground": "#ffffff",
     "list.highlightForeground": "#89b4fa",
     "list.inactiveSelectionBackground": "#1e1e2e",
 
