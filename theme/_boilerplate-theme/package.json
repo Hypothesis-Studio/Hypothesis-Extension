@@ -1,0 +1,46 @@
+{
+  "id": "my-theme-pack",
+  "name": "My Theme Pack",
+  "displayName": "My Theme Pack",
+  "version": "1.0.0",
+  "description": "A custom theme pack for Hypothesis Editor with Dark and Light variants.",
+  "author": "Your Name",
+  "license": "MIT",
+  "main": "extension.js",
+  "engines": {
+    "hypothesis": ">=0.1.0"
+  },
+  "activationEvents": ["*"],
+  "contributes": {
+    "themes": [
+      {
+        "id": "my-dark",
+        "label": "My Dark",
+        "path": "themes/my-dark.json",
+        "uiTheme": "vs-dark"
+      },
+      {
+        "id": "my-light",
+        "label": "My Light",
+        "path": "themes/my-light.json",
+        "uiTheme": "vs"
+      }
+    ],
+    "commands": [
+      {
+        "command": "my-theme.activateDark",
+        "title": "Activate My Dark"
+      },
+      {
+        "command": "my-theme.activateLight",
+        "title": "Activate My Light"
+      }
+    ]
+  },
+  "keywords": ["theme", "dark", "light", "custom"],
+  "private": true,
+  "scripts": {
+    "build": "node build.mjs",
+    "build:dev": "node build.mjs --dev"
+  }
+}

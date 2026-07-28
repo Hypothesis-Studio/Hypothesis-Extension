@@ -1,0 +1,20 @@
+{
+  "id": "one-dark-pro",
+  "name": "One Dark Pro",
+  "displayName": "One Dark Pro",
+  "version": "1.0.0",
+  "description": "Atom's iconic One Dark theme for Hypothesis Editor. Includes Dark and Light variants with full Monaco editor integration.",
+  "author": "Hypothesis Themes",
+  "license": "MIT",
+  "main": "extension.js",
+  "engines": { "hypothesis": ">=0.1.0" },
+  "activationEvents": ["*"],
+  "contributes": {
+    "themes": [
+      { "id": "one-dark-pro", "label": "One Dark Pro", "path": "themes/one-dark-pro.json", "uiTheme": "vs-dark" },
+      { "id": "one-light-pro", "label": "One Light Pro", "path": "themes/one-light-pro.json", "uiTheme": "vs" }
+    ],
+    "commands": []
+  },
+  "keywords": ["theme", "one-dark", "atom", "dark", "light"]
+}

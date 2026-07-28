@@ -1,0 +1,20 @@
+{
+  "id": "material-theme",
+  "name": "Material Theme",
+  "displayName": "Material Theme",
+  "version": "1.0.0",
+  "description": "Professional Material Design-inspired theme with Dark and Light variants. Full UI coverage with 120+ color definitions and Monaco editor integration.",
+  "author": "Hypothesis Themes",
+  "license": "MIT",
+  "main": "extension.js",
+  "engines": { "hypothesis": ">=0.1.0" },
+  "activationEvents": ["*"],
+  "contributes": {
+    "themes": [
+      { "id": "material-dark", "label": "Material Dark", "path": "themes/material-dark.json", "uiTheme": "vs-dark" },
+      { "id": "material-light", "label": "Material Light", "path": "themes/material-light.json", "uiTheme": "vs" }
+    ],
+    "commands": []
+  },
+  "keywords": ["theme", "material", "dark", "light", "design"]
+}

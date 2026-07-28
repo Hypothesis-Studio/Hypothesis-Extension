@@ -1,43 +1,35 @@
-# Hypothesis Extension
+# Hypothesis Extensions
 
-> Extension marketplace for [Hypothesis Editor](https://github.com/Hypothesis-Studio/Hypothesis-Editor).
+Official extension repository for [Hypothesis Editor](https://github.com/Hypothesis-Studio/Hypothesis-Editor) — a modern, extensible desktop code editor.
 
-## What is Hypothesis Extension?
+This repository contains first-party extensions, community boilerplates, and documentation for the Hypothesis extension platform.
 
-**Hypothesis Extension** is a curated collection of extensions (plugins) for Hypothesis Editor. Extensions add new features, integrations, and customization to the editor.
+---
 
-> Want to add your extension? See [Contributing](#contributing) below.
+## Extensions
 
-## Install an Extension
+### Boilerplates
 
-### From this repository
+| Extension | Author | Description |
+| --------- | ------ | ----------- |
+| [Theme Boilerplate](theme/_boilerplate-theme/) | Hypothesis | Starter template for building custom themes |
+| Icon Pack Boilerplate | - | - | - |
 
-1. Download the `.hyp` file from the extension's folder
-2. Open Hypothesis Editor
-3. Go to **Extensions** sidebar → click **+** → select the `.hyp` file
-4. Done — the extension is installed and ready to use
+### Themes
 
-## Create Your Own Extension
+| Extension | Variants | Author | Description |
+| --------- | -------- | ------ | ----------- |
+| [Material Theme](theme/material-theme/) | Dark, Light | Hypothesis | Material Design-inspired theme with 127 colors and 29 syntax scopes |
+| [One Dark Pro](theme/one-dark-pro/) | Dark, Light | Hypothesis | Atom's iconic One Dark theme with complete UI coverage |
 
-Want to build an extension? Start with the [Extension Boilerplate](./Extention-Boilerplate/README.md).
+### Icon Pack
 
-## Contributing
-
-1. Fork this repository
-2. Add your extension to `<your-extension-name>/`
-3. Include a `package.json`, `extension.js`, `extention-name.hyp` and `README.md`
-4. Open a Pull Request
-
-### Requirements
-
-- Extension must have a unique `id` (kebab-case)
-- Extension must include `package.json` with `name`, `id`, `version`
-- Extension must export `activate` and `deactivate` functions
-- Extension must not contain malicious code
-- No external dependencies unless absolutely necessary (prefer Node.js built-ins)
+| Extension | Variants | Author | Description |
+| --------- | -------- | ------ | ----------- |
+| Coming soon | - | - | - |
 
 ---
 
 ## License
 
-[MIT](LICENSE) — © 2026 Hypothesis Studio
+[MIT](LICENSE) — Copyright (c) 2026 Hypothesis Studio
