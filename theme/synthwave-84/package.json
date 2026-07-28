@@ -1,0 +1,23 @@
+{
+  "id": "synthwave-84",
+  "name": "Synthwave '84",
+  "displayName": "Synthwave '84",
+  "version": "1.0.0",
+  "description": "A neon soaked retro theme inspired by the Synthwave music genre.",
+  "author": "Hypothesis",
+  "license": "MIT",
+  "main": "extension.js",
+  "engines": { "hypothesis": ">=0.1.0" },
+  "activationEvents": ["*"],
+  "contributes": {
+    "themes": [
+      { "id": "synthwave-84", "label": "Synthwave '84", "path": "themes/synthwave-84.json", "uiTheme": "vs-dark" }
+    ],
+    "commands": [
+      { "command": "synthwave84.activate", "title": "Activate Synthwave '84" }
+    ]
+  },
+  "keywords": ["theme", "dark", "synthwave", "retro", "neon", "80s"],
+  "private": true,
+  "scripts": { "build": "node build.mjs", "build:dev": "node build.mjs --dev" }
+}

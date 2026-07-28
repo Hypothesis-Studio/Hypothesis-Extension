@@ -1,0 +1,25 @@
+{
+  "id": "solarized",
+  "name": "Solarized",
+  "displayName": "Solarized",
+  "version": "1.0.0",
+  "description": "Precision colors for machines and people. Dark and Light variants.",
+  "author": "Hypothesis",
+  "license": "MIT",
+  "main": "extension.js",
+  "engines": { "hypothesis": ">=0.1.0" },
+  "activationEvents": ["*"],
+  "contributes": {
+    "themes": [
+      { "id": "solarized-dark", "label": "Solarized Dark", "path": "themes/solarized-dark.json", "uiTheme": "vs-dark" },
+      { "id": "solarized-light", "label": "Solarized Light", "path": "themes/solarized-light.json", "uiTheme": "vs" }
+    ],
+    "commands": [
+      { "command": "solarized.activateDark", "title": "Activate Solarized Dark" },
+      { "command": "solarized.activateLight", "title": "Activate Solarized Light" }
+    ]
+  },
+  "keywords": ["theme", "dark", "light", "solarized"],
+  "private": true,
+  "scripts": { "build": "node build.mjs", "build:dev": "node build.mjs --dev" }
+}

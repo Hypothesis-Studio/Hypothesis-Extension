@@ -1,0 +1,27 @@
+{
+  "id": "ayu",
+  "name": "Ayu",
+  "displayName": "Ayu",
+  "version": "1.0.0",
+  "description": "A simple theme with bright colors. Mirage, Dark, and Light variants.",
+  "author": "Hypothesis",
+  "license": "MIT",
+  "main": "extension.js",
+  "engines": { "hypothesis": ">=0.1.0" },
+  "activationEvents": ["*"],
+  "contributes": {
+    "themes": [
+      { "id": "ayu-dark", "label": "Ayu Dark", "path": "themes/ayu-dark.json", "uiTheme": "vs-dark" },
+      { "id": "ayu-mirage", "label": "Ayu Mirage", "path": "themes/ayu-mirage.json", "uiTheme": "vs-dark" },
+      { "id": "ayu-light", "label": "Ayu Light", "path": "themes/ayu-light.json", "uiTheme": "vs" }
+    ],
+    "commands": [
+      { "command": "ayu.activateDark", "title": "Activate Ayu Dark" },
+      { "command": "ayu.activateMirage", "title": "Activate Ayu Mirage" },
+      { "command": "ayu.activateLight", "title": "Activate Ayu Light" }
+    ]
+  },
+  "keywords": ["theme", "dark", "light", "mirage", "ayu", "bright"],
+  "private": true,
+  "scripts": { "build": "node build.mjs", "build:dev": "node build.mjs --dev" }
+}
