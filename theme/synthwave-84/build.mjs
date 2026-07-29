@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * build.mjs — Build .hyp extension from this folder.
+ * build.mjs â€” Build .hyp extension from this folder.
  *
  * Usage:
- *   npm run build          → output: dist/<id>-<version>.hyp
- *   npm run build:dev      → output: dist/<id>-<version>-dev.hyp
- *   node build.mjs         → same as npm run build
- *   node build.mjs --dev   → same as npm run build:dev
+ *   npm run build          â†’ output: dist/<id>-<version>.hyp
+ *   npm run build:dev      â†’ output: dist/<id>-<version>-dev.hyp
+ *   node build.mjs         â†’ same as npm run build
+ *   node build.mjs --dev   â†’ same as npm run build:dev
  *
  * The .hyp file is a tar archive of the extension folder
  * (excluding node_modules, dist, .git, build.mjs, package-lock.json).
@@ -19,14 +19,14 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// ── Read manifest ──────────────────────────────────────────────────
+// â”€â”€ Read manifest â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const manifestPath = join(__dirname, 'package.json');
 
 let manifest;
 try {
   manifest = JSON.parse(readFileSync(manifestPath, 'utf-8'));
 } catch (e) {
-  console.error('❌ Cannot read manifest:', manifestFile);
+  console.error('âŒ Cannot read manifest:', manifestPath);
   process.exit(1);
 }
 
@@ -35,14 +35,14 @@ const extVersion = manifest.version || '1.0.0';
 const isDev = process.argv.includes('--dev');
 const suffix = isDev ? '-dev' : '';
 
-// ── Prepare output ─────────────────────────────────────────────────
+// â”€â”€ Prepare output â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const distDir = join(__dirname, 'dist');
 if (!existsSync(distDir)) mkdirSync(distDir, { recursive: true });
 
 const hypName = `${extId}-${extVersion}${suffix}.hyp`;
 const hypPath = join(distDir, hypName);
 
-// ── Create temp staging dir ────────────────────────────────────────
+// â”€â”€ Create temp staging dir â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const tmpName = `_build_tmp_${Date.now()}`;
 const tmpDir = join(__dirname, tmpName);
 
@@ -62,7 +62,7 @@ function copyDir(src, dest) {
   }
 }
 
-console.log(`📦 Packaging: ${manifest.name || extId} v${extVersion}${isDev ? ' (dev)' : ''}`);
+console.log(`ðŸ“¦ Packaging: ${manifest.name || extId} v${extVersion}${isDev ? ' (dev)' : ''}`);
 console.log(`   Source:    ${__dirname}`);
 
 try {
@@ -80,15 +80,15 @@ try {
   const size = statSync(hypPath).size;
   console.log(`   Output:    ${hypPath}`);
   console.log(`   Size:      ${(size / 1024).toFixed(1)} KB`);
-  console.log(`\n✅ Created: ${hypName}`);
+  console.log(`\nâœ… Created: ${hypName}`);
   console.log(`\nTo install:`);
   console.log(`  1. Open Hypothesis Editor`);
-  console.log(`  2. Extensions sidebar → click + button`);
+  console.log(`  2. Extensions sidebar â†’ click + button`);
   console.log(`  3. Select: dist/${hypName}`);
   console.log(`  Or drag dist/${hypName} into the editor window`);
 } catch (e) {
   // Cleanup on failure
   try { rmSync(tmpDir, { recursive: true, force: true }); } catch {}
-  console.error('❌ Build failed:', e.message);
+  console.error('âŒ Build failed:', e.message);
   process.exit(1);
 }

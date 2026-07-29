@@ -1,42 +1,36 @@
 {
-  "id": "github-dark",
-  "name": "GitHub Dark",
-  "displayName": "GitHub Dark",
-  "version": "1.0.0",
-  "description": "GitHub's Dark theme. Dimmed variant available.",
-  "author": "Hypothesis",
-  "license": "MIT",
-  "main": "extension.js",
-  "engines": {
-    "hypothesis": ">=0.1.0"
-  },
-  "activationEvents": [
-    "*"
-  ],
-  "contributes": {
-    "themes": [
-      {
-        "id": "github-dark",
-        "label": "GitHub Dark",
-        "path": "themes/github-dark.json",
-        "uiTheme": "vs-dark"
-      }
-    ],
-    "commands": [
-      {
-        "command": "github-dark.activate",
-        "title": "Activate GitHub Dark"
-      }
-    ]
-  },
-  "keywords": [
-    "theme",
-    "dark",
-    "github"
-  ],
-  "private": true,
-  "scripts": {
-    "build": "node build.mjs",
-    "build:dev": "node build.mjs --dev"
-  }
+    "id":  "github-dark",
+    "name":  "GitHub Dark",
+    "displayName":  "GitHub Dark",
+    "version":  "1.0.0",
+    "description":  "GitHub\u0027s Dark theme. Dimmed variant available.",
+    "author":  "Hypothesis",
+    "license":  "MIT",
+    "main":  "extension.js",
+    "engines":  {
+                    "hypothesis":  "\u003e=0.1.0"
+                },
+    "activationEvents":  [
+                             "*"
+                         ],
+    "contributes":  {
+                        "themes":  [
+                                       {
+                                           "id":  "github-dark",
+                                           "label":  "GitHub Dark",
+                                           "path":  "themes/github-dark.json",
+                                           "uiTheme":  "vs-dark"
+                                       }
+                                   ]
+                    },
+    "keywords":  [
+                     "theme",
+                     "dark",
+                     "github"
+                 ],
+    "private":  true,
+    "scripts":  {
+                    "build":  "node build.mjs",
+                    "build:dev":  "node build.mjs --dev"
+                }
 }

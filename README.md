@@ -14,7 +14,7 @@ This repository contains first-party extensions, community boilerplates, and doc
 | --------- | ------ | ----------- |
 | [Theme Boilerplate](theme/_boilerplate-theme/) | Hypothesis | Starter template for building custom themes |
 
-> [Download](/theme/dist/) the ready-to-use `.hyp` themes extension.
+> [Download](/dist/theme) the ready-to-use `.hyp` themes extension.
 
 ---
 

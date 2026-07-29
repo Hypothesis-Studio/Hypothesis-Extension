@@ -1,46 +1,44 @@
 {
-  "id": "tokyo-night",
-  "name": "Tokyo Night",
-  "displayName": "Tokyo Night",
-  "version": "1.0.0",
-  "description": "A clean dark theme inspired by the Tokyo night lights. Storm and Night variants.",
-  "author": "Hypothesis",
-  "license": "MIT",
-  "main": "extension.js",
-  "engines": {
-    "hypothesis": ">=0.1.0"
-  },
-  "activationEvents": ["*"],
-  "contributes": {
-    "themes": [
-      {
-        "id": "tokyo-night",
-        "label": "Tokyo Night",
-        "path": "themes/tokyo-night.json",
-        "uiTheme": "vs-dark"
-      },
-      {
-        "id": "tokyo-storm",
-        "label": "Tokyo Storm",
-        "path": "themes/tokyo-storm.json",
-        "uiTheme": "vs-dark"
-      }
-    ],
-    "commands": [
-      {
-        "command": "tokyo-night.activateNight",
-        "title": "Activate Tokyo Night"
-      },
-      {
-        "command": "tokyo-night.activateStorm",
-        "title": "Activate Tokyo Storm"
-      }
-    ]
-  },
-  "keywords": ["theme", "dark", "tokyo", "night", "blue"],
-  "private": true,
-  "scripts": {
-    "build": "node build.mjs",
-    "build:dev": "node build.mjs --dev"
-  }
+    "id":  "tokyo-night",
+    "name":  "Tokyo Night",
+    "displayName":  "Tokyo Night",
+    "version":  "1.0.0",
+    "description":  "A clean dark theme inspired by the Tokyo night lights. Storm and Night variants.",
+    "author":  "Hypothesis",
+    "license":  "MIT",
+    "main":  "extension.js",
+    "engines":  {
+                    "hypothesis":  "\u003e=0.1.0"
+                },
+    "activationEvents":  [
+                             "*"
+                         ],
+    "contributes":  {
+                        "themes":  [
+                                       {
+                                           "id":  "tokyo-night",
+                                           "label":  "Tokyo Night",
+                                           "path":  "themes/tokyo-night.json",
+                                           "uiTheme":  "vs-dark"
+                                       },
+                                       {
+                                           "id":  "tokyo-storm",
+                                           "label":  "Tokyo Storm",
+                                           "path":  "themes/tokyo-storm.json",
+                                           "uiTheme":  "vs-dark"
+                                       }
+                                   ]
+                    },
+    "keywords":  [
+                     "theme",
+                     "dark",
+                     "tokyo",
+                     "night",
+                     "blue"
+                 ],
+    "private":  true,
+    "scripts":  {
+                    "build":  "node build.mjs",
+                    "build:dev":  "node build.mjs --dev"
+                }
 }

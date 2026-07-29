@@ -1,23 +1,38 @@
 {
-  "id": "nord",
-  "name": "Nord",
-  "displayName": "Nord",
-  "version": "1.0.0",
-  "description": "An arctic, north-bluish clean and elegant theme.",
-  "author": "Hypothesis",
-  "license": "MIT",
-  "main": "extension.js",
-  "engines": { "hypothesis": ">=0.1.0" },
-  "activationEvents": ["*"],
-  "contributes": {
-    "themes": [
-      { "id": "nord", "label": "Nord", "path": "themes/nord.json", "uiTheme": "vs-dark" }
-    ],
-    "commands": [
-      { "command": "nord.activate", "title": "Activate Nord" }
-    ]
-  },
-  "keywords": ["theme", "dark", "nord", "arctic", "blue"],
-  "private": true,
-  "scripts": { "build": "node build.mjs", "build:dev": "node build.mjs --dev" }
+    "id":  "nord",
+    "name":  "Nord",
+    "displayName":  "Nord",
+    "version":  "1.0.0",
+    "description":  "An arctic, north-bluish clean and elegant theme.",
+    "author":  "Hypothesis",
+    "license":  "MIT",
+    "main":  "extension.js",
+    "engines":  {
+                    "hypothesis":  "\u003e=0.1.0"
+                },
+    "activationEvents":  [
+                             "*"
+                         ],
+    "contributes":  {
+                        "themes":  [
+                                       {
+                                           "id":  "nord",
+                                           "label":  "Nord",
+                                           "path":  "themes/nord.json",
+                                           "uiTheme":  "vs-dark"
+                                       }
+                                   ]
+                    },
+    "keywords":  [
+                     "theme",
+                     "dark",
+                     "nord",
+                     "arctic",
+                     "blue"
+                 ],
+    "private":  true,
+    "scripts":  {
+                    "build":  "node build.mjs",
+                    "build:dev":  "node build.mjs --dev"
+                }
 }

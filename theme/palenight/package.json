@@ -1,23 +1,38 @@
 {
-  "id": "palenight",
-  "name": "Palenight",
-  "displayName": "Palenight",
-  "version": "1.0.0",
-  "description": "An elegant and juicy material-like theme with a night sky feel.",
-  "author": "Hypothesis",
-  "license": "MIT",
-  "main": "extension.js",
-  "engines": { "hypothesis": ">=0.1.0" },
-  "activationEvents": ["*"],
-  "contributes": {
-    "themes": [
-      { "id": "palenight", "label": "Palenight", "path": "themes/palenight.json", "uiTheme": "vs-dark" }
-    ],
-    "commands": [
-      { "command": "palenight.activate", "title": "Activate Palenight" }
-    ]
-  },
-  "keywords": ["theme", "dark", "palenight", "material", "purple"],
-  "private": true,
-  "scripts": { "build": "node build.mjs", "build:dev": "node build.mjs --dev" }
+    "id":  "palenight",
+    "name":  "Palenight",
+    "displayName":  "Palenight",
+    "version":  "1.0.0",
+    "description":  "An elegant and juicy material-like theme with a night sky feel.",
+    "author":  "Hypothesis",
+    "license":  "MIT",
+    "main":  "extension.js",
+    "engines":  {
+                    "hypothesis":  "\u003e=0.1.0"
+                },
+    "activationEvents":  [
+                             "*"
+                         ],
+    "contributes":  {
+                        "themes":  [
+                                       {
+                                           "id":  "palenight",
+                                           "label":  "Palenight",
+                                           "path":  "themes/palenight.json",
+                                           "uiTheme":  "vs-dark"
+                                       }
+                                   ]
+                    },
+    "keywords":  [
+                     "theme",
+                     "dark",
+                     "palenight",
+                     "material",
+                     "purple"
+                 ],
+    "private":  true,
+    "scripts":  {
+                    "build":  "node build.mjs",
+                    "build:dev":  "node build.mjs --dev"
+                }
 }

@@ -1,23 +1,37 @@
 {
-  "id": "monokai",
-  "name": "Monokai",
-  "displayName": "Monokai",
-  "version": "1.0.0",
-  "description": "Classic Monokai color scheme. Pro and Soda variants.",
-  "author": "Hypothesis",
-  "license": "MIT",
-  "main": "extension.js",
-  "engines": { "hypothesis": ">=0.1.0" },
-  "activationEvents": ["*"],
-  "contributes": {
-    "themes": [
-      { "id": "monokai-pro", "label": "Monokai Pro", "path": "themes/monokai-pro.json", "uiTheme": "vs-dark" }
-    ],
-    "commands": [
-      { "command": "monokai.activate", "title": "Activate Monokai Pro" }
-    ]
-  },
-  "keywords": ["theme", "dark", "monokai", "classic"],
-  "private": true,
-  "scripts": { "build": "node build.mjs", "build:dev": "node build.mjs --dev" }
+    "id":  "monokai",
+    "name":  "Monokai",
+    "displayName":  "Monokai",
+    "version":  "1.0.0",
+    "description":  "Classic Monokai color scheme. Pro and Soda variants.",
+    "author":  "Hypothesis",
+    "license":  "MIT",
+    "main":  "extension.js",
+    "engines":  {
+                    "hypothesis":  "\u003e=0.1.0"
+                },
+    "activationEvents":  [
+                             "*"
+                         ],
+    "contributes":  {
+                        "themes":  [
+                                       {
+                                           "id":  "monokai-pro",
+                                           "label":  "Monokai Pro",
+                                           "path":  "themes/monokai-pro.json",
+                                           "uiTheme":  "vs-dark"
+                                       }
+                                   ]
+                    },
+    "keywords":  [
+                     "theme",
+                     "dark",
+                     "monokai",
+                     "classic"
+                 ],
+    "private":  true,
+    "scripts":  {
+                    "build":  "node build.mjs",
+                    "build:dev":  "node build.mjs --dev"
+                }
 }
