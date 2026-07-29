@@ -8,13 +8,13 @@ This repository contains first-party extensions, community boilerplates, and doc
 
 ## Extensions
 
-### Boilerplates Themes
+### Themes
 
 | Extension | Author | Description |
 | --------- | ------ | ----------- |
 | [Theme Boilerplate](theme/_boilerplate-theme/) | Hypothesis | Starter template for building custom themes |
 
-> [Download](https://github.com/Hypothesis-Studio/Hypothesis-Extension/releases) the ready-to-use `.hyp` extension.
+> [Download](/theme/dist/) the ready-to-use `.hyp` themes extension.
 
 ---
 
