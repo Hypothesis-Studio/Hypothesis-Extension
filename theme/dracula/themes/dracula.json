@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "hypothesis-theme-v1",
   "id": "dracula",
   "name": "Dracula",
@@ -116,7 +116,7 @@
     "input.background": "#343746",
     "input.foreground": "#f8f8f2",
     "input.border": "#6272a4",
-    "input.placeholderForeground": "#6272a4",
+    "input.placeholderForeground": "#7280ad",
     "inputOption.activeBorder": "#ff79c6",
     "inputValidation.errorBackground": "#343746",
     "inputValidation.errorBorder": "#ff5555",
@@ -179,7 +179,7 @@
     {
       "scope": "comment",
       "settings": {
-        "foreground": "#6272a4",
+        "foreground": "#8390b7",
         "fontStyle": "italic"
       }
     },
@@ -358,7 +358,7 @@
     "--editor-fg": "#f8f8f2",
     "--editor-line-highlight": "#343746",
     "--editor-selection": "#ff79c655",
-    "--editor-comment": "#6272a4",
+    "--editor-comment": "#8390b7",
     "--editor-keyword": "#ff79c6",
     "--editor-string": "#f1fa8c",
     "--editor-number": "#bd93f9",

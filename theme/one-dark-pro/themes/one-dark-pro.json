@@ -28,7 +28,7 @@
     "editorIndentGuide.background4": "#3B4048",
     "editorIndentGuide.background5": "#3B4048",
     "editorIndentGuide.background6": "#3B4048",
-    "editorLineNumber.foreground": "#636D83",
+    "editorLineNumber.foreground": "#6c768a",
     "editorLineNumber.activeForeground": "#ABB2BF",
     "editorCursor.foreground": "#528BFF",
     "editorWhitespace.foreground": "#3B4048",
@@ -40,7 +40,7 @@
     "titleBar.activeBackground": "#21252B",
     "titleBar.activeForeground": "#ABB2BF",
     "titleBar.inactiveBackground": "#21252B",
-    "titleBar.inactiveForeground": "#636D83",
+    "titleBar.inactiveForeground": "#656e84",
     "titleBar.border": "#181A1F",
     "statusBar.background": "#528BFF",
     "statusBar.foreground": "#FFFFFF",
@@ -53,7 +53,7 @@
     "tab.activeBorder": "#282C34",
     "tab.activeBorderTop": "#528BFF",
     "tab.inactiveBackground": "#21252B",
-    "tab.inactiveForeground": "#636D83",
+    "tab.inactiveForeground": "#656e84",
     "tab.border": "#181A1F",
     "tab.hoverBackground": "#2C313A",
     "tab.hoverBorder": "#2C313A",
@@ -67,7 +67,7 @@
     "terminal.ansiMagenta": "#C678DD",
     "terminal.ansiCyan": "#56B6C2",
     "terminal.ansiWhite": "#ABB2BF",
-    "terminal.ansiBrightBlack": "#5C6370",
+    "terminal.ansiBrightBlack": "#707681",
     "terminal.ansiBrightRed": "#E06C75",
     "terminal.ansiBrightGreen": "#98C379",
     "terminal.ansiBrightYellow": "#E5C07B",
@@ -77,7 +77,7 @@
     "terminal.ansiBrightWhite": "#FFFFFF",
     "activityBar.background": "#21252B",
     "activityBar.foreground": "#528BFF",
-    "activityBar.inactiveForeground": "#636D83",
+    "activityBar.inactiveForeground": "#656e84",
     "activityBar.border": "#181A1F",
     "activityBarBadge.background": "#528BFF",
     "activityBarBadge.foreground": "#FFFFFF",
@@ -122,7 +122,7 @@
     "gitDecoration.modifiedResourceForeground": "#61AFEF",
     "gitDecoration.deletedResourceForeground": "#E06C75",
     "gitDecoration.untrackedResourceForeground": "#E5C07B",
-    "gitDecoration.ignoredResourceForeground": "#636D83",
+    "gitDecoration.ignoredResourceForeground": "#6c768a",
     "gitDecoration.conflictingResourceForeground": "#E06C75",
     "focusBorder": "#528BFF",
     "foreground": "#ABB2BF",
@@ -140,7 +140,7 @@
     {
       "scope": "comment",
       "settings": {
-        "foreground": "#5C6370",
+        "foreground": "#8f939c",
         "fontStyle": "italic"
       }
     },
@@ -177,7 +177,7 @@
     {
       "scope": "variable",
       "settings": {
-        "foreground": "#E06C75"
+        "foreground": "#e17079"
       }
     },
     {
@@ -189,13 +189,13 @@
     {
       "scope": "parameter",
       "settings": {
-        "foreground": "#E06C75"
+        "foreground": "#e17079"
       }
     },
     {
       "scope": "property",
       "settings": {
-        "foreground": "#E06C75"
+        "foreground": "#e17079"
       }
     },
     {
@@ -213,7 +213,7 @@
     {
       "scope": "tag",
       "settings": {
-        "foreground": "#E06C75"
+        "foreground": "#e17079"
       }
     },
     {
@@ -319,12 +319,12 @@
     "--editor-fg": "#ABB2BF",
     "--editor-line-highlight": "#2C313A",
     "--editor-selection": "#3E4451",
-    "--editor-comment": "#5C6370",
+    "--editor-comment": "#8f939c",
     "--editor-keyword": "#C678DD",
     "--editor-string": "#98C379",
     "--editor-number": "#D19A66",
     "--editor-function": "#61AFEF",
-    "--editor-variable": "#E06C75",
+    "--editor-variable": "#e17079",
     "--editor-type": "#E5C07B",
     "--sidebar-bg": "#21252B",
     "--sidebar-fg": "#ABB2BF",
@@ -336,7 +336,7 @@
     "--statusbar-bg": "#528BFF",
     "--statusbar-fg": "#FFFFFF",
     "--tab-bg": "#21252B",
-    "--tab-fg": "#636D83",
+    "--tab-fg": "#656e84",
     "--tab-active": "#282C34",
     "--tab-border": "#181A1F",
     "--terminal-bg": "#282C34",

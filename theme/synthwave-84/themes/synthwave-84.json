@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "hypothesis-theme-v1",
   "id": "synthwave-84",
   "name": "Synthwave '84",
@@ -210,7 +210,7 @@
     {
       "scope": "function",
       "settings": {
-        "foreground": "#fe4450"
+        "foreground": "#fe4652"
       }
     },
     {
@@ -252,7 +252,7 @@
     {
       "scope": "tag",
       "settings": {
-        "foreground": "#fe4450"
+        "foreground": "#fe4652"
       }
     },
     {
@@ -362,7 +362,7 @@
     "--editor-keyword": "#fede5d",
     "--editor-string": "#ff8b39",
     "--editor-number": "#f97e72",
-    "--editor-function": "#fe4450",
+    "--editor-function": "#fe4652",
     "--editor-variable": "#ffffff",
     "--editor-type": "#36f9f6",
     "--sidebar-bg": "#1e1a2e",

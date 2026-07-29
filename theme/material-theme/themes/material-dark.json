@@ -67,7 +67,7 @@
     "terminal.ansiMagenta": "#C792EA",
     "terminal.ansiCyan": "#89DDFF",
     "terminal.ansiWhite": "#ECEFF1",
-    "terminal.ansiBrightBlack": "#546E7A",
+    "terminal.ansiBrightBlack": "#657d87",
     "terminal.ansiBrightRed": "#FF5370",
     "terminal.ansiBrightGreen": "#C3E88D",
     "terminal.ansiBrightYellow": "#FFCB6B",
@@ -91,7 +91,7 @@
     "input.background": "#37474F",
     "input.foreground": "#ECEFF1",
     "input.border": "#546E7A",
-    "input.placeholderForeground": "#78909C",
+    "input.placeholderForeground": "#7c939f",
     "inputOption.activeBorder": "#80CBC4",
     "dropdown.background": "#37474F",
     "dropdown.foreground": "#ECEFF1",
@@ -140,7 +140,7 @@
     {
       "scope": "comment",
       "settings": {
-        "foreground": "#607D8B",
+        "foreground": "#859ba6",
         "fontStyle": "italic"
       }
     },
@@ -189,7 +189,7 @@
     {
       "scope": "parameter",
       "settings": {
-        "foreground": "#FF5370"
+        "foreground": "#ff617b"
       }
     },
     {
@@ -213,7 +213,7 @@
     {
       "scope": "tag",
       "settings": {
-        "foreground": "#FF5370"
+        "foreground": "#ff617b"
       }
     },
     {
@@ -319,7 +319,7 @@
     "--editor-fg": "#ECEFF1",
     "--editor-line-highlight": "#2C393F",
     "--editor-selection": "#80CBC433",
-    "--editor-comment": "#607D8B",
+    "--editor-comment": "#859ba6",
     "--editor-keyword": "#C792EA",
     "--editor-string": "#C3E88D",
     "--editor-number": "#F78C6C",

@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "hypothesis-theme-v1",
   "id": "rose-pine",
   "name": "RosÃ© Pine",
@@ -116,7 +116,7 @@
     "input.background": "#26233a",
     "input.foreground": "#e0def4",
     "input.border": "#6e6a86",
-    "input.placeholderForeground": "#6e6a86",
+    "input.placeholderForeground": "#716d88",
     "inputOption.activeBorder": "#c4a7e7",
     "inputValidation.errorBackground": "#26233a",
     "inputValidation.errorBorder": "#eb6f92",
@@ -179,14 +179,14 @@
     {
       "scope": "comment",
       "settings": {
-        "foreground": "#6e6a86",
+        "foreground": "#827f97",
         "fontStyle": "italic"
       }
     },
     {
       "scope": "keyword",
       "settings": {
-        "foreground": "#31748f"
+        "foreground": "#5089a0"
       }
     },
     {
@@ -246,13 +246,13 @@
     {
       "scope": "operator",
       "settings": {
-        "foreground": "#31748f"
+        "foreground": "#5089a0"
       }
     },
     {
       "scope": "tag",
       "settings": {
-        "foreground": "#31748f"
+        "foreground": "#5089a0"
       }
     },
     {
@@ -282,7 +282,7 @@
     {
       "scope": "namespace",
       "settings": {
-        "foreground": "#31748f"
+        "foreground": "#5089a0"
       }
     },
     {
@@ -306,25 +306,25 @@
     {
       "scope": "import",
       "settings": {
-        "foreground": "#31748f"
+        "foreground": "#5089a0"
       }
     },
     {
       "scope": "export",
       "settings": {
-        "foreground": "#31748f"
+        "foreground": "#5089a0"
       }
     },
     {
       "scope": "control",
       "settings": {
-        "foreground": "#31748f"
+        "foreground": "#5089a0"
       }
     },
     {
       "scope": "modifier",
       "settings": {
-        "foreground": "#31748f"
+        "foreground": "#5089a0"
       }
     },
     {
@@ -358,8 +358,8 @@
     "--editor-fg": "#e0def4",
     "--editor-line-highlight": "#26233a",
     "--editor-selection": "#c4a7e755",
-    "--editor-comment": "#6e6a86",
-    "--editor-keyword": "#31748f",
+    "--editor-comment": "#827f97",
+    "--editor-keyword": "#5089a0",
     "--editor-string": "#f6c177",
     "--editor-number": "#ebbcba",
     "--editor-function": "#c4a7e7",
