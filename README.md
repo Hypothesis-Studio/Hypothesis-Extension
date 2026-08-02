@@ -2,7 +2,7 @@
 
 Official extension repository for [Hypothesis Editor](https://github.com/Hypothesis-Studio/Hypothesis-Editor) — a modern, extensible desktop code editor.
 
-This repository contains first-party extensions, community boilerplates, and documentation for the Hypothesis extension platform.
+This repository contains first-party extensions, community boilerplates, and documentation for the Hypothesis extension platform
 
 ---
 
@@ -14,7 +14,7 @@ This repository contains first-party extensions, community boilerplates, and doc
 | --------- | ------ | ----------- |
 | [Theme Boilerplate](theme/_boilerplate-theme/) | Hypothesis | Starter template for building custom themes |
 
-> [Download](/dist/theme) the ready-to-use `.hyp` themes extension.
+> [Download](/dist/theme) the ready-to-use `.hyp` themes extension
 
 ---
 
